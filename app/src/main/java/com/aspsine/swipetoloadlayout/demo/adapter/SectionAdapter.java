@@ -100,7 +100,7 @@ public class SectionAdapter extends BaseGroupAdapter<Section, Character> {
         Resources resources = parent.getResources();
         int size = resources.getDimensionPixelOffset(R.dimen.hero_avatar_size);
         int width = resources.getDimensionPixelOffset(R.dimen.hero_avatar_border);
-        Picasso.with(parent.getContext())
+        Picasso.get()
                 .load(character.getAvatar())
                 .resize(size, size)
                 .transform(new CircleTransformation(width))

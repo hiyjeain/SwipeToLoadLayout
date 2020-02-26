@@ -3,8 +3,8 @@ package com.aspsine.swipetoloadlayout.demo.adapter;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
+import androidx.viewpager.widget.ViewPager;
+
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -104,7 +104,7 @@ public class LoopViewPagerAdapter extends BaseLoopPagerAdapter {
         });
         Character character = mHeroes.get(position);
         holder.tvName.setText(character.getName().replace(" ", System.getProperty("line.separator")));
-        Picasso.with(parent.getContext()).load(character.getAvatar()).into(holder.ivBanner);
+        Picasso.get().load(character.getAvatar()).into(holder.ivBanner);
         return convertView;
     }
 

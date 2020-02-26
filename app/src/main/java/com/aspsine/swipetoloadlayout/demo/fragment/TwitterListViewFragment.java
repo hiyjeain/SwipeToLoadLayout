@@ -2,9 +2,9 @@ package com.aspsine.swipetoloadlayout.demo.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.core.view.ViewCompat;
+import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +15,6 @@ import android.widget.Toast;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.GsonRequest;
-import com.aspsine.swipetoloadlayout.OnLoadMoreListener;
-import com.aspsine.swipetoloadlayout.OnRefreshListener;
-import com.aspsine.swipetoloadlayout.SwipeToLoadLayout;
 import com.aspsine.swipetoloadlayout.demo.App;
 import com.aspsine.swipetoloadlayout.demo.Constants;
 import com.aspsine.swipetoloadlayout.demo.R;
@@ -27,6 +24,10 @@ import com.aspsine.swipetoloadlayout.demo.adapter.OnChildItemLongClickListener;
 import com.aspsine.swipetoloadlayout.demo.adapter.SectionAdapter;
 import com.aspsine.swipetoloadlayout.demo.model.Character;
 import com.aspsine.swipetoloadlayout.demo.model.SectionCharacters;
+
+import me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout;
+import me.hiyjeain.android.swipetoloadlayout.listener.OnLoadMoreListener;
+import me.hiyjeain.android.swipetoloadlayout.listener.OnRefreshListener;
 
 /**
  * A simple {@link Fragment} subclass.

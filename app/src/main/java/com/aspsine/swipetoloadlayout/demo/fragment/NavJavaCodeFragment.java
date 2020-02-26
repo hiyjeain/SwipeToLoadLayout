@@ -5,9 +5,9 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,10 +19,11 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.aspsine.swipetoloadlayout.OnLoadMoreListener;
-import com.aspsine.swipetoloadlayout.OnRefreshListener;
-import com.aspsine.swipetoloadlayout.SwipeToLoadLayout;
 import com.aspsine.swipetoloadlayout.demo.R;
+
+import me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout;
+import me.hiyjeain.android.swipetoloadlayout.listener.OnLoadMoreListener;
+import me.hiyjeain.android.swipetoloadlayout.listener.OnRefreshListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -226,7 +227,7 @@ public class NavJavaCodeFragment extends BaseNavigationFragment implements OnRef
                 break;
         }
         if (view != null) {
-            swipeToLoadLayout.setLoadMoreFooterView(view);
+            swipeToLoadLayout.setFooterView(view);
         }
     }
 
@@ -248,7 +249,7 @@ public class NavJavaCodeFragment extends BaseNavigationFragment implements OnRef
                 break;
         }
         if (view != null) {
-            swipeToLoadLayout.setRefreshHeaderView(view);
+            swipeToLoadLayout.setHeaderView(view);
         }
     }
 
@@ -256,16 +257,16 @@ public class NavJavaCodeFragment extends BaseNavigationFragment implements OnRef
         mStyleNum = i;
         switch (i) {
             case 0:
-                swipeToLoadLayout.setSwipeStyle(SwipeToLoadLayout.STYLE.CLASSIC);
+                swipeToLoadLayout.setStyle(SwipeToLoadLayout.STYLE.CLASSIC);
                 break;
             case 1:
-                swipeToLoadLayout.setSwipeStyle(SwipeToLoadLayout.STYLE.ABOVE);
+                swipeToLoadLayout.setStyle(SwipeToLoadLayout.STYLE.ABOVE);
                 break;
             case 2:
-                swipeToLoadLayout.setSwipeStyle(SwipeToLoadLayout.STYLE.BLEW);
+                swipeToLoadLayout.setStyle(SwipeToLoadLayout.STYLE.BLEW);
                 break;
             case 3:
-                swipeToLoadLayout.setSwipeStyle(SwipeToLoadLayout.STYLE.SCALE);
+                swipeToLoadLayout.setStyle(SwipeToLoadLayout.STYLE.SCALE);
                 break;
         }
     }

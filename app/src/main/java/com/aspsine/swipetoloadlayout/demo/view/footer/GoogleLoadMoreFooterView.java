@@ -6,10 +6,11 @@ import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.aspsine.swipetoloadlayout.SwipeLoadMoreTrigger;
-import com.aspsine.swipetoloadlayout.SwipeTrigger;
 import com.aspsine.swipetoloadlayout.demo.R;
 import com.aspsine.swipetoloadlayout.demo.view.drawable.google.RingProgressDrawable;
+
+import me.hiyjeain.android.swipetoloadlayout.trigger.SwipeLoadMoreTrigger;
+import me.hiyjeain.android.swipetoloadlayout.trigger.SwipeTrigger;
 
 /**
  * Created by Aspsine on 2015/11/5.

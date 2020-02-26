@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    compileSdkVersion 29
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.aspsine.swipetoloadlayout"
-        minSdkVersion 10
-        targetSdkVersion 25
+        minSdkVersion 14
+        targetSdkVersion 29
         versionCode 4
         versionName "1.0.4"
     }
@@ -17,22 +17,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    repositories {
-        maven { url "https://jitpack.io" }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile project(':library')
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.android.support:recyclerview-v7:25.1.0'
-    compile 'com.android.support:design:25.1.0'
-    compile 'com.google.code.gson:gson:2.4'
-    compile 'com.mcxiaoke.volley:library-aar:1.0.1'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
-    compile 'com.github.Aspsine:FragmentNavigator:1.0.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.13'
+    implementation project(':library')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+    implementation 'com.github.Aspsine:FragmentNavigator:1.0.2'
 }

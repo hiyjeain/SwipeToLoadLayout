@@ -1,10 +1,11 @@
 package com.aspsine.swipetoloadlayout.demo.adapter;
 
 import android.content.res.Resources;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -223,7 +224,7 @@ public class RecyclerCharactersAdapter extends RecyclerView.Adapter<RecyclerView
         Resources resources = holder.itemView.getResources();
         int size = resources.getDimensionPixelOffset(R.dimen.hero_avatar_size);
         int width = resources.getDimensionPixelOffset(R.dimen.hero_avatar_border);
-        Picasso.with(holder.itemView.getContext())
+        Picasso.get()
                 .load(character.getAvatar())
                 .resize(size, size)
                 .transform(new CircleTransformation(width))

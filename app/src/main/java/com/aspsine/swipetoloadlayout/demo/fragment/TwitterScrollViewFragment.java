@@ -2,9 +2,6 @@ package com.aspsine.swipetoloadlayout.demo.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +10,12 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.core.view.ViewCompat;
+import androidx.fragment.app.Fragment;
+
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.GsonRequest;
-import com.aspsine.swipetoloadlayout.OnLoadMoreListener;
-import com.aspsine.swipetoloadlayout.OnRefreshListener;
-import com.aspsine.swipetoloadlayout.SwipeToLoadLayout;
 import com.aspsine.swipetoloadlayout.demo.App;
 import com.aspsine.swipetoloadlayout.demo.Constants;
 import com.aspsine.swipetoloadlayout.demo.R;
@@ -27,6 +24,10 @@ import com.aspsine.swipetoloadlayout.demo.model.SectionCharacters;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout;
+import me.hiyjeain.android.swipetoloadlayout.listener.OnLoadMoreListener;
+import me.hiyjeain.android.swipetoloadlayout.listener.OnRefreshListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -122,7 +123,7 @@ public class TwitterScrollViewFragment extends BaseFragment implements OnRefresh
                 for (int i = 0; i < characters.size(); i++) {
                     String img = characters.get(i).getAvatar();
                     if (i < ivArray.length) {
-                        Picasso.with(getActivity()).load(img).into(ivArray[i]);
+                        Picasso.get().load(img).into(ivArray[i]);
                     }
                 }
                 swipeToLoadLayout.setRefreshing(false);

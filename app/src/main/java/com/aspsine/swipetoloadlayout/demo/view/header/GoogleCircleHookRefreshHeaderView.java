@@ -3,14 +3,15 @@ package com.aspsine.swipetoloadlayout.demo.view.header;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
-import android.support.v4.view.ViewCompat;
+import androidx.core.view.ViewCompat;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import com.aspsine.swipetoloadlayout.SwipeRefreshTrigger;
-import com.aspsine.swipetoloadlayout.SwipeTrigger;
 import com.aspsine.swipetoloadlayout.demo.R;
 import com.aspsine.swipetoloadlayout.demo.view.GoogleCircleProgressView;
+
+import me.hiyjeain.android.swipetoloadlayout.trigger.SwipeRefreshTrigger;
+import me.hiyjeain.android.swipetoloadlayout.trigger.SwipeTrigger;
 
 /**
  * Created by aspsine on 15/11/7.

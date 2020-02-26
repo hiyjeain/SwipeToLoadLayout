@@ -1,4 +1,4 @@
-<com.aspsine.swipetoloadlayout.SwipeToLoadLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swipeToLoadLayout"
     android:layout_width="match_parent"
@@ -33,4 +33,4 @@
             android:textColor="@color/style_color_primary"
             android:textSize="32sp" />
     </LinearLayout>
-</com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+</me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout>

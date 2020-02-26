@@ -5,12 +5,13 @@ import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.aspsine.swipetoloadlayout.SwipeRefreshTrigger;
-import com.aspsine.swipetoloadlayout.SwipeTrigger;
 import com.aspsine.swipetoloadlayout.demo.R;
 import com.aspsine.swipetoloadlayout.demo.util.DensityUtil;
 import com.aspsine.swipetoloadlayout.demo.view.drawable.yalantis.BaseRefreshDrawable;
 import com.aspsine.swipetoloadlayout.demo.view.drawable.yalantis.SunRefreshDrawable;
+
+import me.hiyjeain.android.swipetoloadlayout.trigger.SwipeRefreshTrigger;
+import me.hiyjeain.android.swipetoloadlayout.trigger.SwipeTrigger;
 
 /**
  * Created by Aspsine on 2015/11/5.

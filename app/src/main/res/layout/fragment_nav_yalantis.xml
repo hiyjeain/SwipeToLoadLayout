@@ -9,7 +9,7 @@
         android:id="@+id/toolbar"
         layout="@layout/layout_toolbar" />
 
-    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+    <me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout
         android:id="@+id/swipeToLoadLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,5 +34,5 @@
             android:dividerHeight="0dp"
             android:fadingEdge="none" />
 
-    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+    </me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout>
 </LinearLayout>

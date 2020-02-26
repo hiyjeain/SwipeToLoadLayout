@@ -9,8 +9,9 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.aspsine.swipetoloadlayout.SwipeRefreshHeaderLayout;
 import com.aspsine.swipetoloadlayout.demo.R;
+
+import me.hiyjeain.android.swipetoloadlayout.SwipeRefreshHeaderLayout;
 
 /**
  * Created by Aspsine on 2015/9/9.

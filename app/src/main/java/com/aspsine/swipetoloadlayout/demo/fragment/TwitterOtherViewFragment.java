@@ -2,18 +2,19 @@ package com.aspsine.swipetoloadlayout.demo.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.aspsine.swipetoloadlayout.OnLoadMoreListener;
-import com.aspsine.swipetoloadlayout.OnRefreshListener;
-import com.aspsine.swipetoloadlayout.SwipeToLoadLayout;
 import com.aspsine.swipetoloadlayout.demo.R;
 import com.squareup.picasso.Picasso;
+
+import me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout;
+import me.hiyjeain.android.swipetoloadlayout.listener.OnLoadMoreListener;
+import me.hiyjeain.android.swipetoloadlayout.listener.OnRefreshListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -119,7 +120,7 @@ public class TwitterOtherViewFragment extends BaseFragment implements OnRefreshL
             @Override
             public void run() {
                 if (ivContent != null) {
-                    Picasso.with(getActivity()).load("https://avatars0.githubusercontent.com/u/1912775?v=3&s=460").into(ivContent);
+                    Picasso.get().load("https://avatars0.githubusercontent.com/u/1912775?v=3&s=460").into(ivContent);
                 }
                 swipeToLoadLayout.setRefreshing(false);
             }

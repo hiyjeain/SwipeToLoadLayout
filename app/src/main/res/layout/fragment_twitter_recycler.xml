@@ -1,4 +1,4 @@
-<com.aspsine.swipetoloadlayout.SwipeToLoadLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swipeToLoadLayout"
@@ -12,7 +12,7 @@
         android:id="@id/swipe_refresh_header"
         layout="@layout/layout_twitter_header" />
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@id/swipe_target"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,4 +21,4 @@
     <include
         android:id="@id/swipe_load_more_footer"
         layout="@layout/layout_classic_footer" />
-</com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+</me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout>

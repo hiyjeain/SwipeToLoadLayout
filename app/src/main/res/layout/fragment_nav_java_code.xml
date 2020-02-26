@@ -8,7 +8,7 @@
         android:id="@+id/toolbar"
         layout="@layout/layout_toolbar" />
 
-    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+    <me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout
         android:id="@+id/swipeToLoadLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,5 +22,5 @@
             android:orientation="vertical"
             android:background="@color/white"/>
 
-    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+    </me.hiyjeain.android.swipetoloadlayout.SwipeToLoadLayout>
 </LinearLayout>
