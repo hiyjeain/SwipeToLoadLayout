@@ -11,7 +11,7 @@ import me.hiyjeain.android.swipetoloadlayout.trigger.SwipeTrigger
  *
  * @author Garrett Xu (hiyjeain@hotmail.com) of YILU Tech Studio (yilu_tech@outlook.com)
  */
-open class SwipeLoadMoreFooterLayout constructor(context: Context?,
+class SwipeLoadMoreFooterLayout constructor(context: Context?,
                                             attrs: AttributeSet? = null,
                                             defStyleAttr: Int = 0) :
         FrameLayout(context!!, attrs, defStyleAttr),

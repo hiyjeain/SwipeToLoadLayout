@@ -1,16 +1,18 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion '28.0.3'
+    compileSdkVersion versions.build.compile_sdk
+    buildToolsVersion versions.build.build_tools
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 29
-        versionCode 4
-        versionName "1.0.4"
+        minSdkVersion versions.build.min_sdk
+        targetSdkVersion versions.build.target_sdk
+        versionCode versions.build.code
+        versionName versions.build.name
+
     }
     buildTypes {
         release {
@@ -18,15 +20,43 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    testImplementation 'junit:junit:4.13'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:+'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:${versions.desugar_jdk}"
+    implementation "androidx.appcompat:appcompat:${versions_androidx.appcompat}"
+    implementation "androidx.core:core-ktx:${versions_androidx.core}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions_kotlin.common}"
 }
-repositories {
-    mavenCentral()
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'me.hiyjeain.android'
+                artifactId = 'swipetoload'
+                version = versions.local.swipetoload
+            }
+
+        }
+        repositories {
+            maven {
+                url SNAPSHOT_REPOSITORY_URL
+                credentials {
+                    username = NEXUS_USERNAME
+                    password = NEXUS_PASSWORD
+                }
+            }
+        }
+    }
 }
