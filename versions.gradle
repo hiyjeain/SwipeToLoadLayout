@@ -7,8 +7,8 @@ ext.versions.lottie = '3.4.0'
 ext.versions.rxlifecycle = '3.1.0'
 ext.versions.desugar_jdk = '1.1.1'
 ext.versions.local = [
-        swipetoload: '1.0.0-snapshot',
-        mercury: '1.0.0-snapshot',
+        swipetoload: '1.0.0-SNAPSHOT',
+        mercury: '1.0.0-SNAPSHOT',
         refreshbehavior: '0.0.2',
 ]
 ext.versions.build = [
